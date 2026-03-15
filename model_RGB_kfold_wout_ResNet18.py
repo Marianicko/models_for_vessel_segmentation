@@ -852,7 +852,7 @@ if __name__ == "__main__":
     # Параметры
     K_FOLDS = 3
     EPOCHS = 100
-    RANDOM_STATE = 999
+    RANDOM_STATE = 42
     PATIENCE = 20
     MIN_DELTA = 0.001
     
