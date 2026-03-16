@@ -14,6 +14,7 @@ import torch.optim as optim
 import torchvision.transforms.v2 as tfs_v2
 import torchvision.models as models
 
+import config
 
 class SegmentDataset(data.Dataset):
     def __init__(self, file_triplets, transform=None):
@@ -928,11 +929,11 @@ if __name__ == "__main__":
     import matplotlib.pyplot as plt
     
     # Параметры
-    K_FOLDS = 3
-    EPOCHS = 100
-    RANDOM_STATE = 999
-    PATIENCE = 20
-    MIN_DELTA = 0.001
+    K_FOLDS = config.K_FOLDS
+    EPOCHS = config.EPOCHS
+    RANDOM_STATE = config.RANDOM_STATE
+    PATIENCE = config.PATIENCE
+    MIN_DELTA = config.MIN_DELTA
     
     # Устройство
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
